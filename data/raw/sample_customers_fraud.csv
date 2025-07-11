@@ -1,0 +1,6 @@
+customer_id,tenure,monthly_charges,total_charges,contract_type,payment_method,internet_service,gender,senior_citizen,partner,dependents,fraud_risk_score
+CUST_0000,15,22.5,337.5,One year,Mailed check,DSL,Male,0,Yes,No,0.1
+CUST_0001,12,41.86,502.32,Two year,Electronic check,No,Male,1,Yes,No,0.2
+CUST_0002,1,95.88,95.88,Month-to-month,Credit card,Fiber optic,Female,0,Yes,No,0.8
+CUST_0003,49,29.67,1453.83,One year,Bank transfer,DSL,Female,0,No,Yes,0.1
+CUST_0004,2,110.25,220.50,Month-to-month,Electronic check,Fiber optic,Male,0,No,No,0.9

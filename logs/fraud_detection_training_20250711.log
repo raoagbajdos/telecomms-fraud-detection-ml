@@ -1,0 +1,50 @@
+2025-07-11 11:50:54,360 - fraud_detection_training - INFO - logger.py:64 - Starting telecoms fraud detection model training pipeline
+2025-07-11 11:50:54,378 - fraud_detection_training - INFO - logger.py:64 - Step 1: Loading and validating data
+2025-07-11 11:50:54,409 - fraud_detection_training - INFO - logger.py:64 - Loaded datasets - Billing: (1000, 17), CRM: (1000, 5)
+2025-07-11 11:50:54,438 - fraud_detection_training - INFO - logger.py:64 - Step 2: Data preprocessing and cleaning
+2025-07-11 11:50:54,476 - fraud_detection_training - INFO - logger.py:64 - Data cleaning completed
+2025-07-11 11:50:54,476 - fraud_detection_training - INFO - logger.py:64 - Step 3: Unifying datasets
+2025-07-11 11:50:54,497 - fraud_detection_training - INFO - logger.py:64 - Unified dataset shape: (951, 47)
+2025-07-11 11:50:54,498 - fraud_detection_training - INFO - logger.py:64 - Step 4: Creating synthetic fraud labels
+2025-07-11 11:50:54,505 - fraud_detection_training - INFO - logger.py:64 - Created fraud labels with 0.0105 fraud rate
+2025-07-11 11:50:54,506 - fraud_detection_training - INFO - logger.py:64 - Fraud label validation: {'fraud_rate': 0.010515247108307046, 'total_fraud_cases': 10, 'total_normal_cases': 941, 'label_distribution': {0: 941, 1: 10}}
+2025-07-11 11:50:54,506 - fraud_detection_training - INFO - logger.py:64 - Step 5: Feature engineering
+2025-07-11 11:50:54,519 - fraud_detection_training - ERROR - logger.py:72 - Training pipeline failed: unsupported operand type(s) for /: 'str' and 'int'
+2025-07-11 11:57:11,523 - fraud_detection_training - INFO - logger.py:64 - Starting telecoms fraud detection model training pipeline
+2025-07-11 11:57:11,546 - fraud_detection_training - INFO - logger.py:64 - Step 1: Loading and validating data
+2025-07-11 11:57:11,593 - fraud_detection_training - INFO - logger.py:64 - Loaded datasets - Billing: (1000, 17), CRM: (1000, 5)
+2025-07-11 11:57:11,601 - fraud_detection_training - INFO - logger.py:64 - Step 2: Data preprocessing and cleaning
+2025-07-11 11:57:11,628 - fraud_detection_training - INFO - logger.py:64 - Data cleaning completed
+2025-07-11 11:57:11,628 - fraud_detection_training - INFO - logger.py:64 - Step 3: Unifying datasets
+2025-07-11 11:57:11,650 - fraud_detection_training - INFO - logger.py:64 - Unified dataset shape: (951, 47)
+2025-07-11 11:57:11,651 - fraud_detection_training - INFO - logger.py:64 - Step 4: Creating synthetic fraud labels
+2025-07-11 11:57:11,653 - fraud_detection_training - INFO - logger.py:64 - Created fraud labels with 0.0105 fraud rate
+2025-07-11 11:57:11,654 - fraud_detection_training - INFO - logger.py:64 - Fraud label validation: {'fraud_rate': 0.010515247108307046, 'total_fraud_cases': 10, 'total_normal_cases': 941, 'label_distribution': {0: 941, 1: 10}}
+2025-07-11 11:57:11,655 - fraud_detection_training - INFO - logger.py:64 - Step 5: Feature engineering
+2025-07-11 11:57:11,672 - fraud_detection_training - ERROR - logger.py:72 - Training pipeline failed: "['online_backup_binary', 'paperless_billing_binary'] not in index"
+2025-07-11 11:57:36,824 - fraud_detection_training - INFO - logger.py:64 - Starting telecoms fraud detection model training pipeline
+2025-07-11 11:57:36,836 - fraud_detection_training - INFO - logger.py:64 - Step 1: Loading and validating data
+2025-07-11 11:57:36,860 - fraud_detection_training - INFO - logger.py:64 - Loaded datasets - Billing: (1000, 17), CRM: (1000, 5)
+2025-07-11 11:57:36,863 - fraud_detection_training - INFO - logger.py:64 - Step 2: Data preprocessing and cleaning
+2025-07-11 11:57:36,879 - fraud_detection_training - INFO - logger.py:64 - Data cleaning completed
+2025-07-11 11:57:36,879 - fraud_detection_training - INFO - logger.py:64 - Step 3: Unifying datasets
+2025-07-11 11:57:36,894 - fraud_detection_training - INFO - logger.py:64 - Unified dataset shape: (951, 47)
+2025-07-11 11:57:36,894 - fraud_detection_training - INFO - logger.py:64 - Step 4: Creating synthetic fraud labels
+2025-07-11 11:57:36,895 - fraud_detection_training - INFO - logger.py:64 - Created fraud labels with 0.0105 fraud rate
+2025-07-11 11:57:36,896 - fraud_detection_training - INFO - logger.py:64 - Fraud label validation: {'fraud_rate': 0.010515247108307046, 'total_fraud_cases': 10, 'total_normal_cases': 941, 'label_distribution': {0: 941, 1: 10}}
+2025-07-11 11:57:36,896 - fraud_detection_training - INFO - logger.py:64 - Step 5: Feature engineering
+2025-07-11 11:57:36,910 - fraud_detection_training - ERROR - logger.py:72 - Training pipeline failed: Can only use .str accessor with string values!
+2025-07-11 11:58:04,158 - fraud_detection_training - INFO - logger.py:64 - Starting telecoms fraud detection model training pipeline
+2025-07-11 11:58:04,179 - fraud_detection_training - INFO - logger.py:64 - Step 1: Loading and validating data
+2025-07-11 11:58:04,225 - fraud_detection_training - INFO - logger.py:64 - Loaded datasets - Billing: (1000, 17), CRM: (1000, 5)
+2025-07-11 11:58:04,235 - fraud_detection_training - INFO - logger.py:64 - Step 2: Data preprocessing and cleaning
+2025-07-11 11:58:04,275 - fraud_detection_training - INFO - logger.py:64 - Data cleaning completed
+2025-07-11 11:58:04,275 - fraud_detection_training - INFO - logger.py:64 - Step 3: Unifying datasets
+2025-07-11 11:58:04,303 - fraud_detection_training - INFO - logger.py:64 - Unified dataset shape: (951, 47)
+2025-07-11 11:58:04,303 - fraud_detection_training - INFO - logger.py:64 - Step 4: Creating synthetic fraud labels
+2025-07-11 11:58:04,306 - fraud_detection_training - INFO - logger.py:64 - Created fraud labels with 0.0105 fraud rate
+2025-07-11 11:58:04,307 - fraud_detection_training - INFO - logger.py:64 - Fraud label validation: {'fraud_rate': 0.010515247108307046, 'total_fraud_cases': 10, 'total_normal_cases': 941, 'label_distribution': {0: 941, 1: 10}}
+2025-07-11 11:58:04,308 - fraud_detection_training - INFO - logger.py:64 - Step 5: Feature engineering
+2025-07-11 11:58:04,345 - fraud_detection_training - INFO - logger.py:64 - Created 21 additional features
+2025-07-11 11:58:04,345 - fraud_detection_training - INFO - logger.py:64 - Step 6: Feature selection
+2025-07-11 11:58:04,358 - fraud_detection_training - ERROR - logger.py:72 - Training pipeline failed: operands could not be broadcast together with shapes (951,) (951,2) 

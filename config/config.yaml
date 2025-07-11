@@ -1,0 +1,185 @@
+# Telecoms Fraud Detection ML Configuration
+
+# Data Processing Configuration
+data_processing:
+  missing_value_threshold: 0.5  # Drop columns with >50% missing values
+  outlier_method: "iqr"         # Method for outlier detection
+  encoding_method: "label"      # Categorical encoding method
+  scaling_method: "standard"    # Feature scaling method
+  date_format: "%Y-%m-%d"       # Date format for parsing
+  
+  # Column mappings
+  customer_id_column: "customer_id"
+  target_column: "is_fraud"
+  
+  # File formats to process
+  supported_formats:
+    - ".csv"
+    - ".xlsx"
+    - ".xls"
+    - ".json"
+    - ".parquet"
+
+# Model Training Configuration
+model_training:
+  # Model selection
+  auto_select_best: true
+  available_models:
+    - "random_forest"
+    - "xgboost"
+    - "logistic_regression"
+    - "svm"
+  
+  # Training parameters
+  test_size: 0.2
+  random_state: 42
+  cross_validation_folds: 5
+  tune_hyperparameters: true
+  
+  # Model-specific parameters
+  random_forest:
+    n_estimators: [50, 100, 200]
+    max_depth: [5, 10, 15, 20]
+    min_samples_split: [2, 5, 10]
+    min_samples_leaf: [1, 2, 4]
+    max_features: ["sqrt", "log2"]
+  
+  xgboost:
+    n_estimators: [50, 100, 200]
+    max_depth: [3, 6, 9]
+    learning_rate: [0.01, 0.1, 0.2]
+    subsample: [0.8, 0.9, 1.0]
+    colsample_bytree: [0.8, 0.9, 1.0]
+  
+  logistic_regression:
+    C: [0.1, 1.0, 10.0]
+    penalty: ["l1", "l2"]
+    solver: ["liblinear", "saga"]
+  
+  svm:
+    C: [0.1, 1.0, 10.0]
+    gamma: ["scale", "auto", 0.001, 0.01]
+    kernel: ["rbf", "linear"]
+
+# Feature Engineering Configuration
+feature_engineering:
+  # Feature creation
+  create_tenure_groups: true
+  create_spending_categories: true
+  create_service_bundles: true
+  
+  # Feature selection
+  select_top_features: true
+  max_features: 50
+  feature_selection_method: "mutual_info"
+  
+  # Categorical features to encode
+  categorical_features:
+    - "gender"
+    - "contract_type"
+    - "payment_method"
+    - "internet_service"
+    - "phone_service"
+    - "multiple_lines"
+    - "online_security"
+    - "online_backup"
+    - "device_protection"
+    - "tech_support"
+    - "streaming_tv"
+    - "streaming_movies"
+    - "paperless_billing"
+    - "partner"
+    - "dependents"
+
+# Model Evaluation Configuration
+model_evaluation:
+  # Metrics to calculate
+  metrics:
+    - "accuracy"
+    - "precision"
+    - "recall"
+    - "f1_score"
+    - "roc_auc"
+    - "confusion_matrix"
+  
+  # Evaluation settings
+  generate_plots: true
+  save_classification_report: true
+  save_feature_importance: true
+  
+  # Thresholds
+  min_acceptable_auc: 0.7
+  min_acceptable_precision: 0.6
+  min_acceptable_recall: 0.6
+
+# Data Validation Configuration
+data_validation:
+  # Schema validation
+  enforce_schema: false
+  required_columns:
+    - "customer_id"
+    - "is_fraud"
+  
+  # Data quality checks
+  max_missing_percentage: 50
+  max_duplicate_percentage: 10
+  check_data_drift: false
+  
+  # Value ranges for validation
+  numeric_ranges:
+    tenure: [0, 100]
+    monthly_charges: [0, 1000]
+    total_charges: [0, 10000]
+    is_fraud: [0, 1]
+    senior_citizen: [0, 1]
+
+# Sample Data Generation Configuration
+sample_data:
+  default_customers: 2000
+  default_fraud_rate: 0.05
+  random_seed: 42
+  
+  # Data quality simulation
+  add_missing_values: true
+  missing_rate: 0.05
+  add_outliers: true
+  outlier_rate: 0.02
+  add_categorical_noise: true
+  noise_rate: 0.05
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "{time:YYYY-MM-DD HH:mm:ss} | {level: <8} | {name}:{function}:{line} - {message}"
+  log_to_file: false
+  log_file: "logs/fraud_detection.log"
+
+# Paths Configuration
+paths:
+  data:
+    raw: "data/raw"
+    processed: "data/processed"
+    sample: "data/sample"
+  
+  models:
+    directory: "models"
+    filename: "model.pkl"
+  
+  reports:
+    directory: "reports"
+    figures: "reports/figures"
+  
+  logs:
+    directory: "logs"
+
+# Performance Configuration
+performance:
+  # Parallel processing
+  n_jobs: -1  # Use all available cores
+  
+  # Memory management
+  chunk_size: 10000
+  low_memory_mode: false
+  
+  # Model serving
+  batch_prediction_size: 1000
